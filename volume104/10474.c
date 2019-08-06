@@ -5,20 +5,19 @@ int cmp(const void *a, const void *b) {
 }
 
 int searctIndex(int arr[], int size, int x) {
-    int l = 0, r = size - 1, mid;
+    int l = 0, r = size, mid;
     while(l < r) {
         mid = (l + r) / 2;
-        if(arr[mid] < x) {
+        if(arr[mid] == x) {
+            return mid;
+        }
+        else if(arr[mid] < x) {
             l = mid + 1;
         } else {
             r = mid;
         }
     }
-    if(arr[r] == x) {
-        return r;
-    } else {
-        return -1;
-    }
+    return -1;
 }
 
 int main() {

@@ -77,7 +77,7 @@ int comparisonBigNumber(BigNumber a, BigNumber b) {
 }
 
 int searchIndex(BigNumber a) {
-    int l = 1, r = 499, mid, result;
+    int l = 1, r = 500, mid, result;
     while(l < r) {
         mid = (l + r) / 2;
         result = comparisonBigNumber(a, f[mid]);
